@@ -73,6 +73,7 @@ export const createSettingsStyles = (colors: ColorScheme) => {
       flexDirection: "row",
       alignItems: "center",
       padding: 20,
+      marginBottom: 10,
       borderRadius: 16,
       borderLeftWidth: 4,
     },

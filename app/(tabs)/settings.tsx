@@ -1,17 +1,18 @@
 import { createSettingsStyles } from '@/assets/styles/settings.styles';
+import DangerZone from '@/components/DangerZone';
+import Preferences from '@/components/Preferences';
 import ProgressStats from '@/components/ProgressStats';
 import useTheme from '@/hooks/useTheme';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
-import React, { useState } from 'react';
+import React from 'react';
 import { ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from "react-native-safe-area-context";
 
 
 const SettingsScreen = () => {
 
-  const [isAutoSync, setIsAutoSync] = useState(true);
-  const [isNotificationEnabled, setIsNotificationEnabled] = useState(true);
+
 
   const {colors, isDarkMode, toggleDarkMode} = useTheme();
 
@@ -30,6 +31,8 @@ const SettingsScreen = () => {
 
         <ScrollView style={settindStyles.scrollView} contentContainerStyle={settindStyles.content} showsVerticalScrollIndicator={false}>
           <ProgressStats />
+          <Preferences />
+          <DangerZone />
         </ScrollView>
       </SafeAreaView>
     </LinearGradient>
